@@ -20,27 +20,27 @@ int main(void)
 	
 while(1){ //while(PINC!=0x00)
 	if(PINC==0x01 && PORTA!=0b00000001){
-		for(int i=0;i<5;i++){ //TURN LED OFF ANY OTHER LED
+		for(int i=0;i<5;i++){ //TURN OFF ALL LEDS
 			PORTA&=~(1<<i);
 		}
-		 for(int j=5;j<=6;j++){ //TURN LED OFF
+		 for(int j=5;j<=6;j++){ //TURN OFF LED 
 			 PORTB&=~(1<<j);
 		 }
 		PORTA|=0b00000001;
 		PORTB|=(1<<PB5);
 	}
  	else if(PINC==0x02 && PORTA!=0b00000010){//CHECK BUTTON PRESSED AND CHECK FLOOR LEVEL
- 		for(int i=0;i<5;i++){ //TURN LED OFF
+ 		for(int i=0;i<5;i++){ //TURN OFF LED 
  			PORTA&=~(1<<i);
  		}
-		 for(int j=5;j<=6;j++){ //TURN LED OFF
+		 for(int j=5;j<=6;j++){ //TURN OFF LED 
 			 PORTB&=~(1<<j);
 		 }
  		PORTA|=(1<<PA1);//TURN PA1 LED ON
 		 PORTB|=(1<<PB6);
  	}
  	else if(PINC==0x04 && PORTA!=0b00000100){
- 		for(int i=0;i<5;i++){ //TURN LED OFF
+ 		for(int i=0;i<5;i++){ //TURN OFF LED 
  			PORTA&=~(1<<i);
  		}
 		 for(int j=5;j<=6;j++){ //TURN LED OFF
@@ -51,30 +51,30 @@ while(1){ //while(PINC!=0x00)
 		PORTB|=(1<<PB6);
  	}
  	else if(PINC==0x08 && PORTA!=0b00001000){
- 		for(int i=0;i<5;i++){ //TURN LED OFF
+ 		for(int i=0;i<5;i++){ //TURN OFF LED 
  			PORTA&=~(1<<i);
  		}
-		 for(int j=5;j<=6;j++){ //TURN LED OFF
+		 for(int j=5;j<=6;j++){ //TURN OFF LED 
 			  PORTB&=~(1<<j);
 		  }
  		PORTA|=(1<<PA3);
 		PORTB|=(1<<PB5);
  	}
  	else if(PINC==0x10 && PORTA!=0b00010000){
- 		for(int i=0;i<5;i++){ //TURN LED OFF
+ 		for(int i=0;i<5;i++){ //TURN OFF LED 
  			PORTA&=~(1<<i);
  		}
-		 for(int j=5;j<=6;j++){ //TURN LED OFF
+		 for(int j=5;j<=6;j++){ //TURN OFF LED 
 			 PORTB&=~(1<<j);
 		 }
  		PORTA|=(1<<PA4);
 		PORTB|=(1<<PB6); 
  	}
  	else if(PINC==0x20 && PORTA!=0b00100000){
- 		for(int i=0;i<5;i++){ //TURN LED OFF
+ 		for(int i=0;i<5;i++){ //TURN OFF LED 
  			PORTA&=~(1<<i);
  		}
-		  for(int j=5;j<=6;j++){ //TURN LED OFF
+		  for(int j=5;j<=6;j++){ //TURN OFF LED 
 			  PORTB&=~(1<<j);
 		  }
  		PORTA|=(1<<PA5);
